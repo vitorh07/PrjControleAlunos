@@ -13,7 +13,7 @@ public class Aluno {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long idAluno;
+	private Long idAluno;
 	
 	@Column(name = "nome")
 	private String nome;
@@ -24,11 +24,14 @@ public class Aluno {
 	@Column(name = "rg")
 	private String rg;
 	
+	@Column(name = "endereco")
+	private String endereco;
+	
 	public long getIdAluno() {
 		return idAluno;
 	}
 
-	public void setIdAluno(long idAluno) {
+	public void setIdAluno(Long idAluno) {
 		this.idAluno = idAluno;
 	}
 
@@ -63,6 +66,4 @@ public class Aluno {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-
-	private String endereco;
 }
